@@ -1,0 +1,581 @@
+
+//banner
+.banner{
+    h2{
+        font-size:$fz-xl;
+        font-weight: 900;
+        @include mobile{
+            font-size: 48px;
+        }
+    }
+   button{
+    padding-right: 36px;
+    margin-top: 60px;
+    @include pad{
+        margin-bottom: 64px;
+    }
+   }
+}
+//animatiom reference from https://codepen.io/HsuanTang/pen/YzJYeyv?editors=1100
+.banner-deco{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 160px;
+    @include mobile{
+        margin-top: 80px;
+    }
+    img{
+        max-width: 20%;
+        animation: banner-deco 6s linear ;
+    }
+    @keyframes banner-deco {
+        0% {
+          transform: translateY(3em);
+        }
+      
+        25% {
+          transform: translateY(0);
+        }
+      
+        50% {
+          transform: translateY(0);
+        }
+      
+        75% {
+          transform: translateY(-3em);
+        }
+      
+        100% {
+          transform: translateY(-3em);
+        }
+      }
+  }
+  .banner-deco img:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .banner-deco img:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+//service
+.service{
+    margin-bottom: 160px;
+    @include mobile{
+        margin-bottom: 100px;
+    }
+    .service-title{
+        margin-bottom: 60px;
+        @include pad{
+            flex-direction: column
+        }
+        @include mobile{
+            flex-direction: column;
+            
+        }
+        h3{
+            font-size: 32px;
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+        p{
+            font-size: $fz-m;
+            font-weight: 900;
+            @include mobile{
+                font-size: 20px;
+            }
+            
+        }
+    }
+}
+
+.service-cards{
+    display: flex;
+    justify-content: space-between;
+    @include pad{
+        flex-wrap: wrap;
+    }
+    .card{
+        &:last-child{
+            margin-right: 0;
+        }
+        margin-right: 16px;
+        padding: 60px;
+        color: $primary-text-color;
+        width: 33%;
+        background-color: $primary-bg-color;
+        border: 1px solid $primary-text-color;
+        @include pad{
+            width: 46%;
+            margin-bottom: 16px;
+        }
+        @include mobile{
+            width: 100%;
+            padding: 36px 14px;
+            margin-bottom: 16px;
+        }
+        img{
+            width: 60px;
+            height: 70px;
+            margin-left: 16px;
+        }
+       .card-title{
+        font-weight: 900;
+        font-size: 32px;
+       }
+       .card-text{
+        font-weight: 400;
+
+       }
+    }
+}
+
+//partner
+.partner{
+    h3{
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 80px;
+    }
+    padding-bottom: 160px;
+    @include pad{
+        padding-bottom: 80px;
+    }
+}
+.partner-logo{
+    overflow: auto;
+    margin-bottom: 80px;
+    img{
+        width: 160px;
+    }
+   
+  
+}
+ //partner review
+.swiper-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    @include pad{
+        margin-bottom: 30px;
+    }
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        flex-grow:1;
+        align-items: stretch;
+        margin: 5px;
+        padding: 43px;
+        border-radius: 16px;
+        background-color:rgba(255, 255, 255, 0.08);
+        .card-title{
+           bottom: 16px;
+           }
+        .reviewer{
+            margin-top: 40px;
+                img{
+                    width: 48px;
+                    margin-right: 18px;
+                }
+            }
+        }
+    }
+   
+   
+
+.swiper-pagination{
+    margin-bottom: 80px;
+    .swiper-pagination-bullet {
+        background: $gray-800;
+        opacity: 3;
+      }
+    .swiper-pagination-bullet-active {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+   }
+}
+.swiper-horizontal{
+    .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: -70px;
+    }
+}
+
+ 
+
+
+
+/* ai tool area */ 
+//title+ searchBar
+.aiTool{
+    background: #FFFFFF;
+    border-radius: 160px;
+    @include pad{
+        margin-top: 80px;
+        
+    }
+    @include mobile{
+        border-radius: 20px;
+        max-width: 500px;
+        margin: auto;
+    }
+    
+   
+   
+    .aiToolTitle{
+    font-style: normal;
+    font-weight: 900;
+    font-size: $fz-l;
+    text-align: center;
+    color: #020202;
+
+    padding: 120px 18px 60px;
+    @include mobile{
+        font-size: 32px;
+        padding:60px 8px 32px;
+    }
+    }
+    .search-icon{
+        color: #919191;
+        position: absolute;
+        top: 36px;
+        left: 46px;
+        transform: translateY(-50%);
+        @include pad{
+          
+            left: 41px;
+          
+        }
+    }
+    .searchBar{
+        width: 100%;
+        background: #F2F2F2;
+        border-radius: 8px;
+        padding: 20px 20px 20px 76px;
+        margin-bottom: 24px;
+    
+    }
+}
+//filter
+.aiTool{
+    .aiTool-filter{
+        flex-wrap: wrap;
+    }
+    .filter{
+        font-weight: 400;
+        line-height: 150%;
+        padding: 20px 32px 20px 40px;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        border-radius: 16px;
+        display:flex;
+        align-items: center;
+        position: relative;
+    }
+    .aiList{
+        
+        display: flex;
+        @include mobile{
+            overflow: auto;
+        }
+        @include pad{
+           order:3;
+           margin-top: 16px;
+          }
+        li a{
+            padding-top: 8px;
+            padding-bottom: 8px;
+             color: black;
+             width: 64px;
+             margin-right: 24px;
+             text-align: center;
+             &:hover{
+                background-color: #f2f2f2;
+                border-radius: 16px;
+             }
+         }
+    }
+    .dropdown-toggle{
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 16px;
+    padding: 20px 32px 20px 40px;
+    }
+}
+
+.aiToolCards{
+        padding-top: 2.5rem; 
+        /* 40px */
+        .aiToolCard{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f2f2f2;
+            border-radius: 16px;
+            width: 33%;
+            margin-bottom: 1.5rem;
+            @include pad{
+                width: 50%;
+              }
+            @include mobile{
+                width: 100%;
+            }
+            .aiToolCardImg{
+                overflow: hidden;
+                object-fit: cover;
+                img{
+                    max-width: 100%;
+                    transition: all 0.3s linear;
+                    &:hover{
+                        transform: scale(1.3);
+                    }
+                }
+            }
+            
+            .aiContext{
+                // flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+        }
+    }
+    
+.toolCardTitle{
+    flex-grow: 1;
+    padding: 18px;
+    border-bottom: 1px solid #f2f2f2;
+        h3{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: black;
+            margin-bottom: 16px;
+        }
+        p{
+            color: #525252;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            margin-bottom: 0;   
+        }
+    }
+.toolCardBody{ 
+    color: #020202;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    .text{
+    font-weight: 700;
+}
+
+}
+.toolCardfooter {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(2, 2, 2, 0.125);
+    padding: 16px;
+    .tag{
+        color:black
+        ;
+    }
+    .share{
+    width: 19px;
+    height: 19px;
+    }
+}
+.aiTool{
+    .page{
+        padding-bottom: 162px;
+        @include mobile{
+            padding-bottom: 60px;
+        }
+        a{
+            font-weight: 700;
+            color: #020202;
+            width: 48px;
+            height: 48px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 16px;
+            padding-top: 14px;
+            &:hover{
+                color:$link-text-color !important;
+                background-color: #020202;
+                border-radius: 16px;
+            }  
+        }
+    }
+    
+}
+
+
+//action area
+//action-area
+.action-area{
+    padding-top: 158px;
+    padding-bottom: 32px;
+    &-title{
+        padding-bottom: 138px;
+        border-bottom: 1px solid #ffffff;
+
+    }
+    h3{
+        margin-bottom: 40px;
+        font-size: $fz-m;
+        font-weight: 900;
+        @include mobile{
+            font-size: 32px;
+        }
+    }
+}
+.action-area-menu{
+    font-weight: 900;
+    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid #f2f2f2;
+    padding-bottom: 60px;
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    @include mobile{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .logo{
+        img{
+            @include mobile{
+                width: 70%;
+            }
+        }
+        
+    }
+    ul{
+        // @include mobile{
+        //     display: flex;
+        // }
+        li{
+            color: #F2F2F2;
+            font-size: $fz-l;
+            @include mobile{
+                font-size: 48px;
+            }
+        }
+    }
+    .logo{
+        @include mobile{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+
+
+//price index
+//price index-banner
+
+.banner-context{
+    width: 50%;
+    font-size: $fz-m;
+    font-weight: 900;
+    margin-bottom: 200px;
+    @include mobile{
+        font-size: 28px;
+        margin-bottom: 100px;
+    }
+}
+
+.price-area{
+    padding-bottom: 80px;
+    h3{
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 80px;
+    }
+}
+.price-card{
+    margin-right: 16px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+    border: 1px solid #464444;
+    padding-top: 40px;
+    width: 48%;
+    &:hover{
+        border: 1px solid #f2f2f2;
+    }
+    @include pad{
+        width: 85%;
+    }
+    @include mobile{
+    width: 100%;
+    }
+    .card-header{
+        padding-left: 36px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+}
+.price-card{
+    .card-body{
+        padding: 16px 18px 80px 52px;
+        border-bottom: 1px solid #464444;
+        ul{
+            li{
+                list-style-type: disc;
+            }
+        }
+    }
+    .card-footer{
+        padding: 34px;
+        p{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        
+       button{
+        display: flex;
+        background-color: #020202;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        span{
+            margin-left: 8px;
+            color: #F2F2F2;
+        }
+       }
+    }
+
+}
+
+// //price index-policy  
+.policy{
+    margin-bottom: 160px;
+    .container{
+        @include pad{
+            flex-direction: column;
+        }
+        h3{
+            font-size: 32px;
+            font-weight: 900;
+            @include pad{
+                margin-bottom: 40px;
+            }
+        }
+        .rule{
+            .policy-title{
+                font-size: $fz-m;
+                font-weight: 900;
+               
+            }
+            .policy-content{
+                font-size: 32px;
+                font-weight: 400;
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #dadada;
+                @include pad{
+                    font-size: 16px;
+                }
+               
+            }
+        }
+    }
+}  

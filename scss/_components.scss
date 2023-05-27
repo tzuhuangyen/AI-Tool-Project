@@ -1,0 +1,92 @@
+//btn
+.actionBtn {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 18px 50px 18px 32px;
+    border: 1px solid #fff;
+}
+//collpase
+.qanda{
+    padding-top: 158px;
+    &-title{
+        font-size: 32px;
+    }
+    @include mobile{
+flex-direction: column;
+    }
+    .qanda-title{
+        margin-bottom: 16px;
+    }
+}
+
+
+
+.accordion-flush{
+    width: 70%;
+    @include mobile{
+        width: 100%;
+    }
+    .accordion-item{
+        &:first-child{
+            border: 1px solid #464444;
+            border-radius: 16px;
+        }
+        border: 1px solid  #464444;
+        &:hover{
+            border: 1px solid $primary-text-color;
+        }
+        border-radius: 16px;
+        margin-bottom: 16px;
+        .accordion-header{
+            border-radius: 16px;
+            .accordion-button:focus{
+                box-shadow :none;
+            }
+        }
+    }
+}
+
+
+.accordion-button{
+    color: $primary-text-color;
+    background-color:$primary-bg-color;
+    &::before{
+    content: "+";
+    margin-right: 16px;
+    margin-left: 16px;
+    }
+    &::after{
+        display: none;
+    }
+    &:not(.collapsed){
+        color: $primary-text-color;
+        background-color:$primary-bg-color;
+    }
+}
+// .form-control, .form-select,.form-check-input:focus :focus {
+//     border-color:$primary-text-color
+// }
+
+
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 16px;
+}
+
+.accordion-flush .accordion-item{
+    color: $primary-text-color;
+    background-color:$primary-bg-color;
+    &:last-child {
+       border-bottom:1px solid  #464444;
+    }
+}
+
+.accordion-body{
+    font-size: 16px;
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 40px;
+}

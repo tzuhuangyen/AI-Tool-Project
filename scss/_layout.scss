@@ -1,0 +1,62 @@
+.header{
+    padding-top: 80px;
+    border-bottom: 1px solid $primary-text-color;
+    margin-bottom: 40px;
+    .logo{
+        width: 188.99px;
+    height: 40px;
+    }
+    .navbar-nav .nav-link{
+        font-size: 24px;
+        color:$primary-text-color;
+    }
+
+}
+.navbar-collapse{
+    position: fixed;
+    top: 150px;
+    right: 0;
+    bottom: 0;
+    left: 63%;
+}
+
+
+
+//footer
+.footer{
+    .container{
+        align-items: flex-start;
+    }
+    color:$primary-text-color;
+    padding-bottom: 32px;
+    .social {
+        width: 50%;
+        @include pad{
+            flex-direction: column;
+        }
+        @include mobile{
+            flex-direction: column;
+        }
+        p{
+            margin-bottom: 3rem;
+        }
+        li{
+            padding-right: 20px;
+        }
+    }
+}
+.footer{
+    .toTop{
+        background-color:#000000;
+        color: $primary-text-color;
+        border: none;
+        margin-right: 36px;
+        @include mobile{
+            height: 30px;
+        }
+        .toTopIcon{
+            position: absolute;
+            right: -37px;
+        }
+    }
+}

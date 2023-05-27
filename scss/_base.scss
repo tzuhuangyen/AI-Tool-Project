@@ -1,0 +1,77 @@
+body{
+    font-family: $font-family-base;
+    background-color:$primary-bg-color ;
+    line-height: 1.5;
+    color:$primary-text-color;
+    
+   
+}
+
+  /* mystyle */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/* rwd img css reset */
+/* 防止產生X軸 */
+/*建議外容器尺寸 置中*/
+//font size
+h2{
+    /* sub-title TC / Heading03 / Bold */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 38px */
+    /* Black/0 */
+    color: #FFFFFF;
+    }
+//spacing 1rem=16px
+//-1:4px, -2=8px, -3=16px,-4=24px,-5=48px;
+
+.container{ 
+    max-width:1296px;
+    margin: 0 auto;
+    @include pad{
+        max-width: 720px;
+    }
+    @include mobile{
+        max-width: 375px;
+    }
+}
+
+img {
+width: 100%;
+// height: auto;
+display: block;
+/* vertical-align: middle; */
+/* 防止照片下方有3px空白 */
+/* object-fit:cover; */
+/* 圖片可依造比例縮放 */
+}
+
+sub{
+vertical-align:sub;} 
+/* 使用小字體在下方 */
+
+a{
+ display:block;
+ text-decoration:none;
+ color:$primary-text-color;
+//  cursor: pointer;
+}
+
+
+ul,li{
+list-style:none;
+
+}
+ol, ul {
+    padding-left: 0rem;
+}
+p{
+    margin: 0;
+}
+.light-color{
+    color:#919191;
+}

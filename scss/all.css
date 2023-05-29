@@ -12124,6 +12124,7 @@ h2, .h2 {
 
 img {
   width: 100%;
+  height: auto;
   display: block;
   /* vertical-align: middle; */
   /* 防止照片下方有3px空白 */
@@ -12154,8 +12155,8 @@ p {
   margin: 0;
 }
 
-.light-color {
-  color: #919191;
+.mr-20 {
+  margin-right: 20px;
 }
 
 .header {
@@ -12167,17 +12168,47 @@ p {
   width: 188.99px;
   height: 40px;
 }
-.header .navbar-nav .nav-link {
-  font-size: 24px;
-  color: #fff;
+.header .navbar {
+  position: relative;
 }
-
-.navbar-collapse {
-  position: fixed;
-  top: 150px;
-  right: 0;
-  bottom: 0;
-  left: 63%;
+.header .navbar .navbar-btn {
+  color: #ffffff;
+  background-color: transparent;
+  border: 0;
+  display: none;
+}
+@media (max-width: 768px) {
+  .header .navbar .navbar-btn {
+    display: block;
+  }
+}
+.header .navbar .navbar-menu {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .header .navbar .navbar-menu {
+    display: none;
+  }
+}
+.header .navbar .navbar-collapse {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  min-height: calc(100vh - 81px);
+  background-color: #000000;
+  border-top: 1px solid #ffffff;
+}
+.header .navbar .navbar-collapse a {
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 4px 0;
+}
+.header .navbar .navbar-collapse .show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {

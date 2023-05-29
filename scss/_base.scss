@@ -42,7 +42,7 @@ h2{
 
 img {
 width: 100%;
-// height: auto;
+height: auto;
 display: block;
 /* vertical-align: middle; */
 /* 防止照片下方有3px空白 */
@@ -71,7 +71,4 @@ ol, ul {
 }
 p{
     margin: 0;
-}
-.light-color{
-    color:#919191;
 }

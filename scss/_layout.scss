@@ -1,3 +1,6 @@
+.mr-20{
+    margin-right: 20px;
+}
 .header{
     padding-top: 80px;
     border-bottom: 1px solid $primary-text-color;
@@ -6,19 +9,50 @@
         width: 188.99px;
     height: 40px;
     }
-    .navbar-nav .nav-link{
-        font-size: 24px;
-        color:$primary-text-color;
+    .navbar{
+        position: relative;
+        .navbar-btn{
+            color: #ffffff;
+            background-color: transparent;
+            border: 0;
+            display: none;
+            @include mobile{
+                display: block;
+            }
+        }
+        .navbar-menu{
+            display: flex;
+            justify-content: space-between;
+            @include mobile{
+                display: none;
+            }
+       
+        } 
+        .navbar-collapse{
+            display: none;//電腦版不顯示
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            min-height: calc(100vh - 81px);
+            background-color: #000000;
+            border-top: 1px solid #ffffff;
+            a{
+                font-size: 80px;
+                line-height: 1.2;
+                margin: 4px 0;
+             
+            }
+            .show{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+               
+   
+        }   
     }
+}
 
-}
-.navbar-collapse{
-    position: fixed;
-    top: 150px;
-    right: 0;
-    bottom: 0;
-    left: 63%;
-}
 
 
 

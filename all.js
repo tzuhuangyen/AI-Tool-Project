@@ -1,18 +1,18 @@
 
-
+//navbar menu collapse
 $(".navbar-btn").click(function(){
   $(".navbar-collapse").toggleClass("show")
 })
 
 
 
-//jquery
+
 //page
-// $(document).ready(function() {
-//     $('.next').click(function(event) {
-//         $(this).toggleClass('active');
-//     });
-//   });
+$(document).ready(function() {
+    $('.next').click(function(event) {
+        $(this).toggleClass('active');
+    });
+  });
 
 //go to top btn
 // $(document).ready(function() {
@@ -179,3 +179,85 @@ $(".navbar-btn").click(function(){
 
   // })})
 
+
+
+
+//PRICE INDEX-
+//API LIST
+const apiPath = 'https://2023-engineer-camp.zeabur.app/api/v1/works';
+const APIlist = document.querySelector('.APIlist')
+//宣告一個陣列和物件空值來接收回傳的數據
+let worksData = []
+let pagesData = {}
+//宣告一個物件給function getData 要帶入的參數
+const data={
+type: '',
+sort:0,
+page:1,
+search: '',
+}
+//將資料渲染到畫面的function
+function renderWorks(){
+  let works ='';
+  worksData.forEach((item)=>{
+    works+= /*html*/` <li class="card">
+    <div class="card-layer">
+      <img class="card-img" src="${item.imageUrl}" alt="ai image">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">${item.title}</h4>
+      <p class="card-text">${item.description}</p>
+    </div>
+    <div class="card-body">
+      <p class="card-subtitle">AI 模型</p>
+      <p class="card-text">${item.model}</p>
+    </div>
+    <div class="card-body">
+      <span class="card-text">#${item.type}</span>
+      <a class="card-link" href="${item.link}" target="_blank">
+        <span class="material-icons">
+          share
+        </span>
+      </a>
+    </div>
+  </li>
+   </li>`
+  });
+  APIlist.innerHTML=works;
+}
+
+//串接api後用一個函示包住來執行
+//在單獨串接api時發生錯誤 但包在函式內就沒有出現錯誤
+function getData({ type, sort, page, search}){
+  const apiUrl=`${apiPath}?sort=${sort}&page=${page}&${type ? `type=${type}&` : ''}${search ? `search=${search}` : ''}`
+// all.js:16 Uncaught ReferenceError: sort is not defined
+//     at all.js:16:33
+
+axios.get(`${apiPath}`)
+    .then(function(res){
+      console.log(res.data)
+      worksData = res.data.ai_works.data;
+      pagesData = res.data.ai_works.page;
+    
+      // console.log('worksData', worksData);
+      // console.log('pagesData', pagesData);
+     renderWorks();
+
+    })}
+
+getData(data);
+
+
+
+// all.js:16 Uncaught ReferenceError: sort is not defined
+//     at all.js:16:33
+//如果只有下面的程式 就會出現上面的錯誤
+// axios.get(`${apiPath}`)
+//     .then(function(res){
+//       console.log(res.data)
+//       worksData = res.data.ai_works.data;
+//       pagesData = res.data.ai_works.page;
+    
+//       console.log('worksData', worksData);
+//       console.log('pagesData', pagesData);
+//     })

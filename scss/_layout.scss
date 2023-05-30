@@ -33,7 +33,7 @@
             position: absolute;
             top: 100%;
             width: 100%;
-            min-height: calc(100vh - 81px);
+            min-height: calc(50vh - 81px);
             background-color: #000000;
             border-top: 1px solid #ffffff;
             a{
@@ -42,17 +42,17 @@
                 margin: 4px 0;
              
             }
-            .show{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-               
-   
+            
         }   
     }
-}
 
+    .navbar-collapse.show{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }}
+       
 
 
 

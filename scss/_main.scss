@@ -41,6 +41,9 @@
         50% {
           transform: translateY(0);
         }
+        50% {
+    transform: translateY(0);
+  }
       
         75% {
           transform: translateY(-3em);
@@ -190,7 +193,8 @@
         background: $gray-800;
         opacity: 3;
       }
-    .swiper-pagination-bullet-active {
+    .swiper-pagination-bullet-
+     {
     background-color: #fff;
     width: 12px;
     height: 12px;
@@ -401,16 +405,20 @@
             padding-top: 14px;
             &:hover{
                 color:$link-text-color !important;
-                background-color: #020202;
+                background-color: #706e6e;
                 border-radius: 16px;
             }  
         }
     }
     
 }
+.next.active{
+    background-color: #020202;
+    .aiTool .page a {
+        color: #f2f2f2;
+    }
+}
 
-
-//action area
 //action-area
 .action-area{
     padding-top: 158px;

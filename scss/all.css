@@ -12196,7 +12196,7 @@ p {
   position: absolute;
   top: 100%;
   width: 100%;
-  min-height: calc(100vh - 81px);
+  min-height: calc(50vh - 81px);
   background-color: #000000;
   border-top: 1px solid #ffffff;
 }
@@ -12205,7 +12205,7 @@ p {
   line-height: 1.2;
   margin: 4px 0;
 }
-.header .navbar .navbar-collapse .show {
+.header .navbar-collapse.show {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12547,7 +12547,7 @@ p {
   background: #343a40;
   opacity: 3;
 }
-.swiper-pagination .swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet- {
   background-color: #fff;
   width: 12px;
   height: 12px;
@@ -12759,8 +12759,15 @@ p {
 }
 .aiTool .page a:hover {
   color: #fff !important;
-  background-color: #020202;
+  background-color: #706e6e;
   border-radius: 16px;
+}
+
+.next.active {
+  background-color: #020202;
+}
+.next.active .aiTool .page a {
+  color: #f2f2f2;
 }
 
 .action-area {

@@ -12266,16 +12266,17 @@ p {
 }
 
 .qanda {
-  width: 50%;
   margin-top: 160px;
 }
 .qanda .qanda-title {
   font-size: 32px;
 }
+.qanda .collapse-items {
+  width: 70%;
+}
 
 .collapse-item .collapse-header:hover, .collapse-item .collapse-header.active {
-  border: 2px solid #fff;
-  color: #FFFFFF;
+  color: #837f7f;
   border-radius: 16px;
 }
 
@@ -12285,6 +12286,7 @@ p {
   border-radius: 16px;
   font-size: 20px;
   margin-bottom: 16px;
+  padding: 16px 64px;
 }
 
 /* Style the accordion header */
@@ -12315,6 +12317,10 @@ p {
 .open {
   display: block;
   padding: 16px 64px;
+}
+
+.d-none {
+  display: none;
 }
 
 .banner h2, .banner .h2 {

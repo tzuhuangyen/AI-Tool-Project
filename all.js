@@ -8,6 +8,7 @@ $(".navbar-btn").click(function(){
 // Get all the accordion items
 $('.collapse-header').click(function (e) { 
   $(this).toggleClass('active');  // 這裡的this代表的是點擊的collapse-item
+  // $(this).parent().find('.collapse-state .add-icon').toggleClass('d-none');
   $(this).parent().find('.collapse-content').slideToggle();
   $(this).parent().siblings().find('.collapse-content').slideUp();
   $(this).parent().siblings().find('.collapse-header').removeClass('active');

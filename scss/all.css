@@ -12266,81 +12266,55 @@ p {
 }
 
 .qanda {
-  padding-top: 158px;
-}
-.qanda-title {
-  font-size: 32px;
-}
-@media (max-width: 768px) {
-  .qanda {
-    flex-direction: column;
-  }
+  width: 50%;
+  margin-top: 160px;
 }
 .qanda .qanda-title {
-  margin-bottom: 16px;
+  font-size: 32px;
 }
 
-.accordion-flush {
-  width: 70%;
-}
-@media (max-width: 768px) {
-  .accordion-flush {
-    width: 100%;
-  }
-}
-.accordion-flush .accordion-item {
-  border: 1px solid #464444;
+.collapse-item .collapse-header:hover, .collapse-item .collapse-header.active {
+  border: 2px solid #fff;
+  color: #FFFFFF;
   border-radius: 16px;
-  margin-bottom: 16px;
-}
-.accordion-flush .accordion-item:first-child {
-  border: 1px solid #464444;
-  border-radius: 16px;
-}
-.accordion-flush .accordion-item:hover {
-  border: 1px solid #fff;
-}
-.accordion-flush .accordion-item .accordion-header {
-  border-radius: 16px;
-}
-.accordion-flush .accordion-item .accordion-header .accordion-button:focus {
-  box-shadow: none;
 }
 
-.accordion-button {
-  color: #fff;
+.collapse-item {
   background-color: #000000;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
-.accordion-button::before {
+
+/* Style the accordion header */
+.collapse-header {
+  border: none;
+  padding: 16px 64px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.collapse-header::before {
   content: "+";
-  margin-right: 16px;
-  margin-left: 16px;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
 }
-.accordion-button::after {
+
+/* Style the active accordion header */
+.collapse-content {
   display: none;
-}
-.accordion-button:not(.collapsed) {
+  padding: 16px;
+  text-align: start;
   color: #fff;
-  background-color: #000000;
 }
 
-.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
-  border-radius: 16px;
-}
-
-.accordion-flush .accordion-item {
-  color: #fff;
-  background-color: #000000;
-}
-.accordion-flush .accordion-item:last-child {
-  border-bottom: 1px solid #464444;
-}
-
-.accordion-body {
-  font-size: 16px;
-  padding-top: 0;
-  padding-left: 60px;
-  padding-right: 40px;
+.open {
+  display: block;
+  padding: 16px 64px;
 }
 
 .banner h2, .banner .h2 {
@@ -12381,6 +12355,9 @@ p {
     transform: translateY(3em);
   }
   25% {
+    transform: translateY(0);
+  }
+  50% {
     transform: translateY(0);
   }
   50% {
@@ -12502,11 +12479,47 @@ p {
 }
 
 .partner-logo {
-  overflow: auto;
   margin-bottom: 80px;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* 隱藏 x 軸 */
+  /* Hide scrollbar for IE, Edge and Firefox */
+  /* Set properties for .dark-cover */
 }
 .partner-logo img {
   width: 160px;
+  height: 40px;
+  margin-right: 20px;
+}
+.partner-logo .dark-cover::-webkit-scrollbar {
+  display: none;
+}
+.partner-logo .dark-cover {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.partner-logo .dark-cover {
+  overflow-x: scroll;
+  position: relative;
+  /* Create pseudo-elements before and after .dark-cover */
+  /* Set properties for pseudo-elements */
+}
+.partner-logo .dark-cover::before, .partner-logo .dark-cover::after {
+  content: "";
+  position: sticky;
+  width: 196px;
+  height: 40px;
+  top: 0;
+}
+.partner-logo .dark-cover::before {
+  left: 0;
+  padding-right: 196px;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.partner-logo .dark-cover::after {
+  right: 0;
+  padding-right: 196px;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  transform: rotate(-180deg);
 }
 
 .swiper-wrapper {

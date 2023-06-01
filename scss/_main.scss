@@ -147,13 +147,48 @@
     }
 }
 .partner-logo{
-    overflow: auto;
     margin-bottom: 80px;
     img{
-        width: 160px;
+    width: 160px;
+    height: 40px;
+    margin-right: 20px;
     }
-   
-  
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  /* 隱藏 x 軸 */
+  .dark-cover::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .dark-cover {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+   /* Set properties for .dark-cover */
+  .dark-cover {
+    overflow-x: scroll;
+    position: relative;
+     /* Create pseudo-elements before and after .dark-cover */
+    &::before,&::after {
+        content: "";
+        position: sticky;
+        width: 196px;
+        height: 40px;
+        top: 0;
+      }
+    
+     /* Set properties for pseudo-elements */
+        &::before {
+            left: 0;
+            padding-right: 196px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+          }
+          &::after {
+            right: 0;
+            padding-right: 196px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      transform: rotate(-180deg);
+    }
+    }
 }
  //partner review
 .swiper-wrapper{

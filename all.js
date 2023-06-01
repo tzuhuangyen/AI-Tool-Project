@@ -4,7 +4,22 @@ $(".navbar-btn").click(function(){
   $(".navbar-collapse").toggleClass("show")
 })
 
+// Q&A
+// Get all the accordion items
+$('.collapse-header').click(function (e) { 
+  $(this).toggleClass('active');  // 這裡的this代表的是點擊的collapse-item
+  $(this).parent().find('.collapse-content').slideToggle();
+  $(this).parent().siblings().find('.collapse-content').slideUp();
+  $(this).parent().siblings().find('.collapse-header').removeClass('active');
 
+});
+
+
+
+
+    
+  
+  
 
 
 //page
@@ -15,14 +30,14 @@ $(document).ready(function() {
   });
 
 //go to top btn
-// $(document).ready(function() {
-//     $('#scrollTop').click(function(e){
-//         e.preventDefault();
-//         $('html,body').animate({
-//           scrollTop:0
-//         },1000)
-//       })
-//   });
+$(document).ready(function() {
+    $('#scrollTop').click(function(e){
+        e.preventDefault();
+        $('html,body').animate({
+          scrollTop:0
+        },1000)
+      })
+  });
 
 
 
@@ -172,12 +187,6 @@ $(document).ready(function() {
 
 
 
-  // Q&A
-  // $(document).ready(function(){
-  //   $('.q-title').click(function(e){
-  //       $('.ans').slideDown();
-
-  // })})
 
 
 

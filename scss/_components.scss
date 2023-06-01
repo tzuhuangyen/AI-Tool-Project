@@ -9,84 +9,55 @@
     padding: 18px 50px 18px 32px;
     border: 1px solid #fff;
 }
-//collpase
+//q&a accordion
 .qanda{
-    padding-top: 158px;
-    &-title{
+    width: 50%;
+    margin-top: 160px;
+    .qanda-title{
         font-size: 32px;
     }
-    @include mobile{
-flex-direction: column;
-    }
-    .qanda-title{
-        margin-bottom: 16px;
-    }
 }
 
-
-
-.accordion-flush{
-    width: 70%;
-    @include mobile{
-        width: 100%;
-    }
-    .accordion-item{
-        &:first-child{
-            border: 1px solid #464444;
-            border-radius: 16px;
-        }
-        border: 1px solid  #464444;
-        &:hover{
-            border: 1px solid $primary-text-color;
-        }
+.collapse-item .collapse-header:hover , .collapse-item .collapse-header.active {
+        border: 2px solid #fff;    
+        color: #FFFFFF;
         border-radius: 16px;
-        margin-bottom: 16px;
-        .accordion-header{
-            border-radius: 16px;
-            .accordion-button:focus{
-                box-shadow :none;
-            }
-        }
-    }
 }
-
-
-.accordion-button{
-    color: $primary-text-color;
-    background-color:$primary-bg-color;
-    &::before{
-    content: "+";
-    margin-right: 16px;
-    margin-left: 16px;
-    }
-    &::after{
-        display: none;
-    }
-    &:not(.collapsed){
-        color: $primary-text-color;
-        background-color:$primary-bg-color;
-    }
-}
-// .form-control, .form-select,.form-check-input:focus :focus {
-//     border-color:$primary-text-color
-// }
-
-
-.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+.collapse-item{
+    background-color: #000000;
+    color: #fff;
     border-radius: 16px;
+    font-size: 20px;
+    margin-bottom: 16px;
 }
 
-.accordion-flush .accordion-item{
-    color: $primary-text-color;
-    background-color:$primary-bg-color;
-    &:last-child {
-       border-bottom:1px solid  #464444;
+   /* Style the accordion header */
+  .collapse-header {
+    border: none;
+    padding: 16px 64px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    &::before {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        transform: translateY(-50%);
+      }}
+        /* Style the active accordion header */
+  .collapse-content{
+    
+        display: none;
+        padding: 16px;
+        text-align: start;
+        color: #fff;
+    
+    
     }
-}
 
-.accordion-body{
-    font-size: 16px;
-    padding-top: 0;
-    padding-left: 60px;
-    padding-right: 40px;
-}
+.open {
+    display: block;
+    padding: 16px 64px;
+  }

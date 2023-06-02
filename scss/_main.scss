@@ -155,7 +155,7 @@
     margin-right: 20px;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
-  /* 隱藏 x 軸 */
+  /* 隱藏 x 軸 */  
   .dark-cover::-webkit-scrollbar {
     display: none;
   }
@@ -191,6 +191,7 @@
     }
     }
 }
+
  //partner review
 .swiper-wrapper{
     display: flex;
@@ -208,9 +209,7 @@
         padding: 43px;
         border-radius: 16px;
         background-color:rgba(255, 255, 255, 0.08);
-        .card-title{
-           bottom: 16px;
-           }
+
         .reviewer{
             margin-top: 40px;
                 img{
@@ -220,20 +219,17 @@
             }
         }
     }
-   
-   
-
 .swiper-pagination{
     margin-bottom: 80px;
     .swiper-pagination-bullet {
         background: $gray-800;
         opacity: 3;
       }
-    .swiper-pagination-bullet-
+    .swiper-pagination-bullet-active
      {
-    background-color: #fff;
-    width: 12px;
-    height: 12px;
+        background-color: #fff;
+        width: 12px;
+        height: 12px;
    }
 }
 .swiper-horizontal{

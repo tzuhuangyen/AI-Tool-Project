@@ -12268,6 +12268,10 @@ p {
   right: -37px;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 .actionBtn {
   font-weight: 900;
   font-size: 20px;
@@ -12565,9 +12569,6 @@ p {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.08);
 }
-.swiper-wrapper .swiper-slide .card-title {
-  bottom: 16px;
-}
 .swiper-wrapper .swiper-slide .reviewer {
   margin-top: 40px;
 }
@@ -12583,7 +12584,7 @@ p {
   background: #343a40;
   opacity: 3;
 }
-.swiper-pagination .swiper-pagination-bullet- {
+.swiper-pagination .swiper-pagination-bullet-active {
   background-color: #fff;
   width: 12px;
   height: 12px;

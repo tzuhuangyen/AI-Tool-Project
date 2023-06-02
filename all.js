@@ -165,25 +165,25 @@ $(document).ready(function() {
 //   accordtionCardItem() 
 
 //reviewer
-// var swiper = new Swiper(".mySwiper", {
-//     slidesPerView: 1,
-//     spaceBetween: 24,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     breakpoints: {
-//       768: {
-//         slidesPerView: 1,
-//         // spaceBetween: 10,
-//       },
-//       1200: {
-//         slidesPerView: 3,
-//         // spaceBetween: 20,
-//       },
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        // spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        // spaceBetween: 20,
+      },
      
-//     },
-//   });
+    },
+  });
 
 
 

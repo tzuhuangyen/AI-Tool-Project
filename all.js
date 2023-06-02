@@ -1,7 +1,7 @@
 
 //navbar menu collapse
-$(".navbar-btn").click(function(){
-  $(".navbar-collapse").toggleClass("show")
+$(".navbar-btn").click(function(e){
+  $(".navbar-clps").toggleClass("show")
 })
 
 // Q&A

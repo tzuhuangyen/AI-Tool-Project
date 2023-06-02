@@ -16,42 +16,38 @@
 <body>
     <div class="header container">    
         <!-- //.logo>h1>a>img+navbar -->
-        <div class="navbar d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
           <h1 class="logo"><a href="#"><img src="./image/logo.png" alt="logo" ></a></h1>
-          <button type="button" class="navbar-btn">
-            <span class="material-icons">
-                menu
-            </span>
-          </button>
-          <ul class="navbar-menu">
-            <li  class="mr-20" ><a href="index.html">首頁</a></li>
-            <li><a href="priceIndex.html">定價</a></li>
-          </ul>
-          <div class="navbar-collapse">
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="priceIndex.html">定價</a></li>
-            </ul>
-          </div>
-          <!-- <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" aria-haspopup="menu">
+
+          <!-- navbar -->
+          <nav class="navbar">
+              <ul class="nav-items">
+                <li>
+                  <a class="nav-item" href="./index.html">首頁</a>
+                </li>
+                <li>
+                  <a class="nav-item" href="./priceIndex.html">定價</a>
+                </li>
+              </ul>
+              <!-- navbar collapse -->
+              <button class="navbar-btn" type="button" >
                 <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/icons/menu.png" alt="menu" class="navbar-toggler-icon ">
-             
+                <!-- <span class="material-icons">
+                    menu
+                </span> -->
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+              <div class="navbar-clps">
+                <ul class="navbarNav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">首頁</a>
+                    <a class="nav-link" aria-current="page" href="./index.html">首頁</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./priceIndex.html">定價</a>
                   </li>
                 </ul>
               </div>
-            </div>
-          </nav> -->
-       </div>
+          </nav>
+        </div>
     </div>
     <!-- banner -->
     <div class="container">

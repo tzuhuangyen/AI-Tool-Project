@@ -2,6 +2,7 @@
     margin-right: 20px;
 }
 .header{
+    // position: relative;
     padding-top: 80px;
     border-bottom: 1px solid $primary-text-color;
     margin-bottom: 40px;
@@ -10,7 +11,7 @@
     height: 40px;
     }
     .navbar{
-        position: relative;
+        // position: relative;
         .nav-items{
             display: flex;
             @include pad{
@@ -38,15 +39,17 @@
         .navbar-clps{
             display: none;//電腦版不顯示
             position: fixed;
-            top: 81px;
+            top: 20%;
             left: 0;
+            right: 0;
             width: 100%;
             min-height: calc(100vh - 81px);
             background-color: #000000;
             border-top: 1px solid #ffffff;
+            z-index: 999;
           .navbarNav{
             display: flex;
-            flex-direction: column;
+         background-color: #000000;       flex-direction: column;
           }
             .nav-item{
                 .nav-link{

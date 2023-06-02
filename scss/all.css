@@ -12168,9 +12168,6 @@ p {
   width: 188.99px;
   height: 40px;
 }
-.header .navbar {
-  position: relative;
-}
 .header .navbar .nav-items {
   display: flex;
 }
@@ -12199,15 +12196,18 @@ p {
 .header .navbar .navbar-clps {
   display: none;
   position: fixed;
-  top: 81px;
+  top: 20%;
   left: 0;
+  right: 0;
   width: 100%;
   min-height: calc(100vh - 81px);
   background-color: #000000;
   border-top: 1px solid #ffffff;
+  z-index: 999;
 }
 .header .navbar .navbar-clps .navbarNav {
   display: flex;
+  background-color: #000000;
   flex-direction: column;
 }
 .header .navbar .navbar-clps .nav-item .nav-link {
@@ -12337,6 +12337,9 @@ p {
   display: none;
 }
 
+.banner {
+  position: relative;
+}
 .banner h2, .banner .h2 {
   font-size: 120px;
   font-weight: 900;

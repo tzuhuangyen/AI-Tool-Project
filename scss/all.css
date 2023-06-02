@@ -12645,10 +12645,10 @@ p {
   margin-bottom: 24px;
 }
 
-.aiTool .aiTool-filter {
+.aiTool-filter {
   flex-wrap: wrap;
 }
-.aiTool .filter {
+.aiTool-filter .filter-btn {
   font-weight: 400;
   line-height: 150%;
   padding: 20px 32px 20px 40px;
@@ -12659,21 +12659,70 @@ p {
   align-items: center;
   position: relative;
 }
-.aiTool .aiList {
+.aiTool-filter .type-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: #020202;
+  border-radius: 20px;
+  margin-top: 8px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.15);
+}
+.aiTool-filter .type-dropdown ul {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.aiTool-filter .type-dropdown ul .AI-type, .aiTool-filter .type-dropdown ul .type {
+  color: #706e6e;
+  font-size: 12px;
+  padding: 20px;
+}
+.aiTool-filter .type-dropdown ul a {
+  color: #2e2e2e;
+  margin-bottom: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 300px;
+}
+.aiTool-filter .type-dropdown ul a:hover {
+  background-color: #F2F2F2;
+  color: #020202;
+}
+.aiTool-filter .type-dropdown.show {
+  display: block !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aiTool-filter .type-dropdown .check::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  height: 7px;
+  width: 10px;
+  top: 122px;
+  right: 45px;
+  color: #020202;
+  transform: rotate(315deg);
+}
+
+.aiList {
   display: flex;
 }
 @media (max-width: 768px) {
-  .aiTool .aiList {
+  .aiList {
     overflow: auto;
   }
 }
 @media (max-width: 996px) {
-  .aiTool .aiList {
+  .aiList {
     order: 3;
     margin-top: 16px;
   }
 }
-.aiTool .aiList li a {
+.aiList li a {
   padding-top: 8px;
   padding-bottom: 8px;
   color: black;
@@ -12681,11 +12730,12 @@ p {
   margin-right: 24px;
   text-align: center;
 }
-.aiTool .aiList li a:hover {
+.aiList li a:hover {
   background-color: #f2f2f2;
   border-radius: 16px;
 }
-.aiTool .dropdown-toggle {
+
+.dropdown-toggle {
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   border-radius: 16px;

@@ -176,10 +176,32 @@
             </div>
             <!-- 篩選 -->
             <div class="aiTool-filter d-flex justify-content-between align-items-center">
-                <button class="filter">篩選<span class="material-symbols-outlined">
-                        filter_alt
-                        </span>
-                </button>
+                <div class="filter">
+                    <button class="filter-btn">篩選
+                        <span class="material-symbols-outlined">filter_alt</span>
+                    </button>
+                    <div class="type-dropdown d-none">
+                        <ul >
+                            <li class="AI-type type-drop-item">AI模型</li>
+                            <li class="type-drop-item"><a href="#">所有模型</a></li>
+                            <li class="type-drop-item"><a>卡卡</a></li>
+                            <li class="type-drop-item"><a>結節</a></li>
+                            <li class="type-drop-item"><a>琪琪</a></li>
+                            <li class="type-drop-item"><a>昊昊</a></li>
+                         </ul>
+                         <ul>
+                            <li class="type">類型</li>
+                            <li class="type-drop-item"><a href="#">所有類型</a></li>
+                             <li class="type-drop-item"><a>篩選項目1</a></li>
+                             <li class="type-drop-item"><a>篩選項目2</a></li>
+                             <li class="type-drop-item"><a>篩選項目3</a></li>
+                             <li class="type-drop-item"><a>篩選項目4</a></li>
+                             <li class="type-drop-item"><a>篩選項目5</a></li>
+                             <li class="type-drop-item"><a>篩選項目6</a></li>
+                         </ul>
+                    </div>
+                </div>
+                <!-- list-filter -->
                 <ul class="aiList">
                         <li> <a href="#">全部</a> </li>
                         <li> <a href="#">聊天</a></li>
@@ -193,9 +215,8 @@
                         由新到舊
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item new-to-old" href="#">由新到舊</a></li>
+                      <li><a class="dropdown-item old-to-new" href="#">由舊到新</a></li>
                     </ul>
                 </div>
             </div>

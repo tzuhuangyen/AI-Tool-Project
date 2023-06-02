@@ -17,49 +17,47 @@
    }
 }
 //animatiom reference from https://codepen.io/HsuanTang/pen/YzJYeyv?editors=1100
-.banner-deco{
+.banner-deco-group{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 160px;
+    overflow: hidden;
     @include mobile{
         margin-top: 80px;
     }
     img{
         max-width: 20%;
-        animation: banner-deco 6s linear ;
+        // animation: banner-deco 6s linear ;
+        position: relative;
+        top: 100%;
+        @include pad{
+            max-width: 33%;
+        }
     }
-    @keyframes banner-deco {
-        0% {
-          transform: translateY(3em);
-        }
-      
-        25% {
-          transform: translateY(0);
-        }
-      
-        50% {
-          transform: translateY(0);
-        }
-        50% {
-    transform: translateY(0);
-  }
-      
-        75% {
-          transform: translateY(-3em);
-        }
-      
-        100% {
-          transform: translateY(-3em);
-        }
+     .arrow-1 {
+        animation: banner-deco 3.5s 0.8s ease-in-out infinite;
+      }
+     .arrow-2 {
+        animation: banner-deco 3.5s 0.4s ease-in-out infinite;
+      }
+      .arrow-3 {
+        animation: banner-deco 3.5s 0s ease-in-out infinite;
       }
   }
-  .banner-deco img:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  .banner-deco img:nth-child(1) {
-    animation-delay: 1s;
-  }
 
+
+@keyframes banner-deco 
+  {
+    0% {
+        top: 110%;
+      }
+      40%, 60% {
+        top: 0%;
+      }
+      100% {
+        top: -110%;
+      }
+    }
 //service
 .service{
     margin-bottom: 160px;
@@ -309,8 +307,11 @@
             margin-top: 8px;
             box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.15);
             ul{
-                position: relative;
                 border-bottom:1px solid rgba(0, 0, 0, 0.15);
+                .type-drop-item{
+                    position: relative;
+
+                }
                 .AI-type,.type {
                     color: #706e6e;
                     font-size: 12px;
@@ -344,7 +345,7 @@
               border-width: 0 0 1px 1px;
               height: 7px;
               width: 10px;
-              top: 122px;
+              top: 12px;
               right: 45px;
               color: #020202;
               transform: rotate(315deg);

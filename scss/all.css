@@ -12363,49 +12363,48 @@ p {
   }
 }
 
-.banner-deco {
+.banner-deco-group {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 160px;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
-  .banner-deco {
+  .banner-deco-group {
     margin-top: 80px;
   }
 }
-.banner-deco img {
+.banner-deco-group img {
   max-width: 20%;
-  animation: banner-deco 6s linear;
+  position: relative;
+  top: 100%;
 }
+@media (max-width: 996px) {
+  .banner-deco-group img {
+    max-width: 33%;
+  }
+}
+.banner-deco-group .arrow-1 {
+  animation: banner-deco 3.5s 0.8s ease-in-out infinite;
+}
+.banner-deco-group .arrow-2 {
+  animation: banner-deco 3.5s 0.4s ease-in-out infinite;
+}
+.banner-deco-group .arrow-3 {
+  animation: banner-deco 3.5s 0s ease-in-out infinite;
+}
+
 @keyframes banner-deco {
   0% {
-    transform: translateY(3em);
+    top: 110%;
   }
-  25% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(-3em);
+  40%, 60% {
+    top: 0%;
   }
   100% {
-    transform: translateY(-3em);
+    top: -110%;
   }
 }
-
-.banner-deco img:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.banner-deco img:nth-child(1) {
-  animation-delay: 1s;
-}
-
 .service {
   margin-bottom: 160px;
 }
@@ -12669,8 +12668,10 @@ p {
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.15);
 }
 .aiTool-filter .type-dropdown ul {
-  position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.aiTool-filter .type-dropdown ul .type-drop-item {
+  position: relative;
 }
 .aiTool-filter .type-dropdown ul .AI-type, .aiTool-filter .type-dropdown ul .type {
   color: #706e6e;
@@ -12702,7 +12703,7 @@ p {
   border-width: 0 0 1px 1px;
   height: 7px;
   width: 10px;
-  top: 122px;
+  top: 12px;
   right: 45px;
   color: #020202;
   transform: rotate(315deg);

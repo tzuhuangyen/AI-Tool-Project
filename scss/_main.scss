@@ -665,3 +665,14 @@
         }
     }
 }  
+
+// price aitoocard
+.workCard{
+    max-width: 33%;
+    @include pad{
+        max-width: 50%;
+    }
+    @include mobile{
+        max-width: 100%;
+    }
+}

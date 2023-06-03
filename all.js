@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 
 //index-reviewer
-let swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
   spaceBetween: 24,
   pagination: {
     el: ".swiper-pagination",
@@ -203,44 +203,11 @@ sort:0,
 page:1,
 search: '',
 }
-//將資料渲染到畫面的function
-function renderWorks(){
-  let works ='';
-  worksData.forEach((item)=>{
-    works+= /*html*/` <li class="card">
-    <div class="card-layer">
-      <img class="card-img" src="${item.imageUrl}" alt="ai image">
-    </div>
-    <div class="card-body">
-      <h4 class="card-title">${item.title}</h4>
-      <p class="card-text">${item.description}</p>
-    </div>
-    <div class="card-body">
-      <p class="card-subtitle">AI 模型</p>
-      <p class="card-text">${item.model}</p>
-    </div>
-    <div class="card-body">
-      <span class="card-text">#${item.type}</span>
-      <a class="card-link" href="${item.link}" target="_blank">
-        <span class="material-icons">
-          share
-        </span>
-      </a>
-    </div>
-  </li>
-   </li>`
-  });
-  APIlist.innerHTML=works;
-}
-
 //串接api後用一個函示包住來執行
-//在單獨串接api時發生錯誤 但包在函式內就沒有出現錯誤
 function getData({ type, sort, page, search}){
   const apiUrl=`${apiPath}?sort=${sort}&page=${page}&${type ? `type=${type}&` : ''}${search ? `search=${search}` : ''}`
-// all.js:16 Uncaught ReferenceError: sort is not defined
-//     at all.js:16:33
-
-axios.get(`${apiPath}`)
+  
+  axios.get(`${apiPath}`)
     .then(function(res){
       console.log(res.data)
       worksData = res.data.ai_works.data;
@@ -251,25 +218,40 @@ axios.get(`${apiPath}`)
      renderWorks();
 
     })}
+//將資料渲染到畫面的function
+function renderWorks(){
+  let works ='';
+  worksData.forEach((item)=>{
+    works+= /*html*/` 
+    <li class="workCard">
+        <div class="card-layer">
+          <img class="card-img" src="${item.imageUrl}" alt="ai image">
+        </div>
+        <div class="cardTitle">
+          <h4 class="card-title">${item.title}</h4>
+          <p class="card-text">${item.description}</p>
+        </div>
+        <div class="cardBody">
+          <p class="card-subtitle">AI 模型</p>
+          <p class="card-text">${item.model}</p>
+        </div>
+        <div class="cardFoot">
+          <span class="card-text">#${item.type}</span>
+          <a class="card-link" href="${item.link}" target="_blank">
+            <span class="material-icons">
+              share
+            </span>
+          </a>
+        </div>
+  </li>
+   </li>`
+  });
+  APIlist.innerHTML=works;
+}
+
+
 
 getData(data);
-
-
-
-// all.js:16 Uncaught ReferenceError: sort is not defined
-//     at all.js:16:33
-//如果只有下面的程式 就會出現上面的錯誤
-// axios.get(`${apiPath}`)
-//     .then(function(res){
-//       console.log(res.data)
-//       worksData = res.data.ai_works.data;
-//       pagesData = res.data.ai_works.page;
-    
-//       console.log('worksData', worksData);
-//       console.log('pagesData', pagesData);
-//     })
-
-
 
 
 // price-index-Q&A

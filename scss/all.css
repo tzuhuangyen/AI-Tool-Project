@@ -13012,4 +13012,18 @@ p {
   .policy .container .rule .policy-content {
     font-size: 16px;
   }
+}
+
+.workCard {
+  max-width: 33%;
+}
+@media (max-width: 996px) {
+  .workCard {
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .workCard {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=all.css.map */

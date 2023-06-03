@@ -274,7 +274,7 @@ getData(data);
 $('.collapse-title').click(function () { 
   $(this).next().toggleClass('open') // 這裡的this代表的是點擊的collapse-item
   $(this).find('.icon-add, .icon-remove').toggle();
-  //$(this).parent().siblings().find('.collapse-content').slideUp();
   $(this).parent().siblings().find('.collapse-content').removeClass('open');
-
-});
+  //$(this).parent().siblings().find('.icon-add, .icon-remove').toggle();
+   //$(this).find('.icon-add,.icon-remove').toggle();
+  });

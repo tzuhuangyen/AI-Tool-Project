@@ -35,25 +35,25 @@ $(document).ready(function() {
 
 
 //index-reviewer
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      // spaceBetween: 10,
-    },
-    1200: {
-      slidesPerView: 3,
-      // spaceBetween: 20,
-    },
+// let swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 1,
+//   spaceBetween: 24,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 1,
+//       // spaceBetween: 10,
+//     },
+//     1200: {
+//       slidesPerView: 3,
+//       // spaceBetween: 20,
+//     },
    
-  },
-});
+//   },
+// });
 
 //index page
 $(document).ready(function() {
@@ -267,13 +267,14 @@ getData(data);
 //     })
 
 
+
+
 // price-index-Q&A
 // Get all the accordion items
-$('.collapse-header').click(function (e) { 
-  $(this).toggleClass('active');  // 這裡的this代表的是點擊的collapse-item
-  // $(this).parent().find('.collapse-state .add-icon').toggleClass('d-none');
-  $(this).parent().find('.collapse-content').slideToggle();
-  $(this).parent().siblings().find('.collapse-content').slideUp();
-  $(this).parent().siblings().find('.collapse-header').removeClass('active');
+$('.collapse-title').click(function () { 
+  $(this).next().toggleClass('open') // 這裡的this代表的是點擊的collapse-item
+  $(this).find('.icon-add, .icon-remove').toggle();
+  //$(this).parent().siblings().find('.collapse-content').slideUp();
+  $(this).parent().siblings().find('.collapse-content').removeClass('open');
 
 });

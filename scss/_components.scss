@@ -38,7 +38,6 @@
 
 //q&a accordion
 .qanda{
-   
     margin-top: 160px;
     .qanda-title{
         font-size: 32px;
@@ -48,9 +47,10 @@
     }
 }
 
-.collapse-item .collapse-header:hover , .collapse-item .collapse-header.active {
+.collapse-item:hover , .collapse-item .collapse-header.active {
        
         color: #837f7f;
+        border: 1px solid #837f7f;
         border-radius: 16px;
 }
 .collapse-item{
@@ -60,39 +60,34 @@
     font-size: 20px;
     margin-bottom: 16px;
     padding: 16px 64px;
+    .collapse-title {
+      border: none;
+      padding: 16px 64px;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      position: relative;
+    }
+    .collapse-content{
+  
+          display: none;
+          padding: 16px;
+          text-align: start;
+          color: #fff;
+      
+      
+      }
+  
+}
+.icon-add {
+  display: block;
 }
 
-   /* Style the accordion header */
-  .collapse-header {
-    border: none;
-    padding: 16px 64px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    position: relative;
-    &::before {
-        content: "+";
-        position: absolute;
-        top: 50%;
-        left: 3%;
-        transform: translateY(-50%);
-      }}
-        /* Style the active accordion header */
-  .collapse-content{
-      
-        display: none;
-        padding: 16px;
-        text-align: start;
-        color: #fff;
-    
-    
-    }
+.icon-remove {
+  display: none;
+}
 
-.open {
-    display: block;
-    padding: 16px 64px;
-  }
+.collapse-content.open {
+    display: block!important;  }
   
-  .d-none{
-    display: none;
-  }
+  

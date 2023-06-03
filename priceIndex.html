@@ -53,10 +53,10 @@
       <div class="d-flex justify-content-end">
         <div class="banner-context">我們相信，最靈活的取用機<br>制，才能最大化的幫助你業務的推動。</div>
       </div>
-      <div class="banner-deco justify-content-start">
-          <img src="./image/bannerDeco.png" alt="banner">
-          <img src="./image/bannerDeco.png" alt="banner">
-          <img src="./image/bannerDeco.png" alt="banner">
+      <div class="banner-deco-group banner-deco justify-content-start">
+          <img src="./image/bannerDeco.png" alt="banner" class="arrow-1">
+          <img src="./image/bannerDeco.png" alt="banner" class="arrow-2">
+          <img src="./image/bannerDeco.png" alt="banner" class="arrow-3">
       </div>
     </div>
     <!-- price-area -->
@@ -253,87 +253,86 @@
   <!-- QA accordion -->
     <div class="qanda container d-flex justify-content-between">
         <div class="qanda-title">常見問題 </div>
-    
-          <div class="collapse-items d-flex  flex-column">
-            <button class="collapse-item d-flex align-items-center">
-              <div class="collapse-state">
-                 <span class="material-symbols-outlined   add-icon">
+          
+        <ul class="collapse-items d-flex  flex-column">
+            <li class="collapse-item">
+              <div class="collapse-title d-flex align-items-center">
+                 <span class="material-symbols-outlined   icon-add">
                     add
                     </span>
-                <span class="material-symbols-outlined remove-icon d-none">
+                <span class="material-symbols-outlined icon-remove ">
                   remove
                   </span>
+                  <p class="collapse-header"> 如何選擇適合的 AI 模型？</p>
               </div>
-              <div>
-                <div class="collapse-header"> 如何選擇適合的 AI 模型？</div>
-                <div class="collapse-content">
+              <div class="collapse-content">
                   選擇適合的 AI 模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。
-                </div>
               </div>
-            </button>
-            <button class="collapse-item">
-              <!-- <div class="collapse-state">
-                <span class="material-symbols-outlined   add-icon">
-                  add
-                  </span>
-              <span class="material-symbols-outlined remove-icon d-none">
-                remove
-                </span>
-              </div> -->
-              <div class="collapse-header"> 租用模型的費用是如何計算的？</div>
+            </li>
+            <li class="collapse-item">
+              <div class="collapse-title d-flex align-items-center">
+                <span class="material-symbols-outlined   icon-add">
+                   add
+                   </span>
+               <span class="material-symbols-outlined icon-remove">
+                 remove
+                 </span>
+                 <p class="collapse-header"> 租用模型的費用是如何計算的？</p>
+             </div>
               <div class="collapse-content">
                     租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
               </div>
-            </button>
-            <button class="collapse-item">
-              <div class="collapse-state">
-                <span class="material-symbols-outlined   add-icon">
+            </li>
+            <li class="collapse-item">
+              <div class="collapse-title d-flex align-items-center">
+                <span class="material-symbols-outlined   icon-add">
                   add
                   </span>
-              <span class="material-symbols-outlined remove-icon d-none">
+              <span class="material-symbols-outlined icon-remove ">
                 remove
                 </span>
+                <p class="collapse-header"> 如何進行付款？</p>
+
               </div>
-              <div class="collapse-header"> 如何進行付款？</div>
               <div class="collapse-content">
                   
                     付款方式可以通過網站上提供的宴上支付平台進行支付。具體而言，您可以選擇信用卡、銀行轉帳電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用欸用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向您提供相應的服務。
               </div>
-            </button>
-            <button class="collapse-item">
-              <div class="collapse-state">
-                <span class="material-symbols-outlined   add-icon">
+            </li>
+            <li class="collapse-item">
+              <div class="collapse-title d-flex align-items-center">
+                <span class="material-symbols-outlined   icon-add">
                   add
                   </span>
-              <span class="material-symbols-outlined remove-icon d-none">
+              <span class="material-symbols-outlined icon-remove ">
                 remove
                 </span>
+                <p class="collapse-header">  租用模型的期限是多久？</p>
               </div>
-              <div class="collapse-header">  租用模型的期限是多久？</div>
               <div class="collapse-content">
                 
                     租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。
               </div>
-            </button>
-            <button class="collapse-item">
-              <div class="collapse-state">
-                  <span class="material-symbols-outlined   add-icon">
+            </li>
+            <li class="collapse-item">
+              <div class="collapse-title d-flex align-items-center">
+                  <span class="material-symbols-outlined   icon-add">
                     add
                     </span>
-                <span class="material-symbols-outlined remove-icon d-none">
+                <span class="material-symbols-outlined icon-remove ">
                   remove
                   </span>
+                  <p class="collapse-header">如果在使用的過程中遇到問題，應該怎麼處理？</p>
+
               </div>
-              <div class="collapse-header">如果在使用的過程中遇到問題，應該怎麼處理？</div>
               <div class="collapse-content">
                   
                     如果在使用過程中遇到問題，您可以聯繫惡扶或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。
               </div>
-            </button>
-          </div>
-     </div>
-  
-    
+            </li>
+        </ul>
+    </div>
+
     <div class=" action-area container ">
         <!-- <div class=" action-area-title text-center">
             <h3 class="font-m">現在就來建立屬於你的服務吧</h3>

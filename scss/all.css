@@ -12293,8 +12293,9 @@ p {
   width: 70%;
 }
 
-.collapse-item .collapse-header:hover, .collapse-item .collapse-header.active {
+.collapse-item:hover, .collapse-item .collapse-header.active {
   color: #837f7f;
+  border: 1px solid #837f7f;
   border-radius: 16px;
 }
 
@@ -12306,9 +12307,7 @@ p {
   margin-bottom: 16px;
   padding: 16px 64px;
 }
-
-/* Style the accordion header */
-.collapse-header {
+.collapse-item .collapse-title {
   border: none;
   padding: 16px 64px;
   width: 100%;
@@ -12316,29 +12315,23 @@ p {
   cursor: pointer;
   position: relative;
 }
-.collapse-header::before {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-}
-
-/* Style the active accordion header */
-.collapse-content {
+.collapse-item .collapse-content {
   display: none;
   padding: 16px;
   text-align: start;
   color: #fff;
 }
 
-.open {
+.icon-add {
   display: block;
-  padding: 16px 64px;
 }
 
-.d-none {
+.icon-remove {
   display: none;
+}
+
+.collapse-content.open {
+  display: block !important;
 }
 
 .banner {

@@ -16,7 +16,27 @@
     }
    }
 }
-//animatiom reference from https://codepen.io/HsuanTang/pen/YzJYeyv?editors=1100
+
+//1.建立動畫
+@keyframes banner-deco 
+  {
+    0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+//2.將動畫名加入要呈現的地方
+.arrow-1 {
+    animation: banner-deco 3.5s 0.8s ease-in-out infinite;
+  }
+ .arrow-2 {
+    animation: banner-deco 3.5s 0.4s ease-in-out infinite;
+  }
+  .arrow-3 {
+    animation: banner-deco 3.5s 0s ease-in-out infinite;
+  }
 .banner-deco-group{
     display: flex;
     justify-content: flex-end;
@@ -34,30 +54,9 @@
             max-width: 33%;
         }
     }
-     .arrow-1 {
-        animation: banner-deco 3.5s 0.8s ease-in-out infinite;
-      }
-     .arrow-2 {
-        animation: banner-deco 3.5s 0.4s ease-in-out infinite;
-      }
-      .arrow-3 {
-        animation: banner-deco 3.5s 0s ease-in-out infinite;
-      }
+  
   }
 
-
-@keyframes banner-deco 
-  {
-    0% {
-        top: 110%;
-      }
-      40%, 60% {
-        top: 0%;
-      }
-      100% {
-        top: -110%;
-      }
-    }
 //service
 .service{
     margin-bottom: 160px;

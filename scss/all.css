@@ -12363,6 +12363,26 @@ p {
   }
 }
 
+@keyframes banner-deco {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.arrow-1 {
+  animation: banner-deco 3.5s 0.8s ease-in-out infinite;
+}
+
+.arrow-2 {
+  animation: banner-deco 3.5s 0.4s ease-in-out infinite;
+}
+
+.arrow-3 {
+  animation: banner-deco 3.5s 0s ease-in-out infinite;
+}
+
 .banner-deco-group {
   display: flex;
   justify-content: flex-end;
@@ -12384,27 +12404,7 @@ p {
     max-width: 33%;
   }
 }
-.banner-deco-group .arrow-1 {
-  animation: banner-deco 3.5s 0.8s ease-in-out infinite;
-}
-.banner-deco-group .arrow-2 {
-  animation: banner-deco 3.5s 0.4s ease-in-out infinite;
-}
-.banner-deco-group .arrow-3 {
-  animation: banner-deco 3.5s 0s ease-in-out infinite;
-}
 
-@keyframes banner-deco {
-  0% {
-    top: 110%;
-  }
-  40%, 60% {
-    top: 0%;
-  }
-  100% {
-    top: -110%;
-  }
-}
 .service {
   margin-bottom: 160px;
 }
